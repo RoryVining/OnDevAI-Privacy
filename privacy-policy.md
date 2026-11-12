@@ -6,7 +6,7 @@ permalink: /privacy-policy/
 # Privacy Policy — OnDevAI
 
 **Effective date:** [EFFECTIVE DATE — to be filled in by the developer]
-**App:** OnDevAI (Android package `com.ragdev.ai`)
+**App:** OnDevAI (Android package `com.ondevai.app`)
 **Developer / controller:** [DEVELOPER LEGAL NAME — to be filled in], [POSTAL ADDRESS — to be filled in], Australia
 **Contact:** [CONTACT EMAIL — to be filled in]
 
@@ -21,7 +21,7 @@ The following stays in the app's private storage on your phone (it is not sent t
 - **Downloaded or imported AI models**, voices and language packs.
 - **Pictures you generate** or edit (stored in the app's gallery; if you tap Save, a copy is also written to your phone's Photos under *Pictures/RAGDev AI* (art) or *Pictures/RAGDev* (edited photos); if you tap Share, the file goes to the app you choose).
 - **A Hugging Face access token, only if you choose to enter one** (to download gated models). It is encrypted with the Android Keystore and used only to authenticate to huggingface.co.
-You can delete conversations, documents/index, models, voices and gallery images inside the app, and everything is removed when you uninstall (except pictures you saved to Photos, which you can delete there). Android's Auto Backup may copy some app data to your Google account if backup is enabled on your device.
+You can delete conversations, documents/index, models, voices and gallery images inside the app, and everything is removed when you uninstall (except pictures you saved to Photos, which you can delete there). The app's data is not included in Android backups (the app turns Android Auto Backup off).
 
 ## 3. When the app uses the internet
 
