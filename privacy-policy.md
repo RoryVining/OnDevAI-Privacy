@@ -24,6 +24,7 @@ The following stays in the app's private storage on your phone (it is not sent t
 You can delete conversations, documents/index, models, voices and gallery images inside the app, and everything is removed when you uninstall (except pictures you saved to Photos, which you can delete there). Android's Auto Backup may copy some app data to your Google account if backup is enabled on your device.
 
 ## 3. When the app uses the internet
+
 | Situation | Who we connect to | What is sent |
 |---|---|---|
 | Opening the app: refreshing the list of downloadable models | GitHub (`raw.githubusercontent.com`) | A normal web request (your IP address and app identifier "OnDevAI"); no personal data and no content |
