@@ -25,12 +25,15 @@ You can delete conversations, documents/index, models, voices and gallery images
 
 ## 3. When the app uses the internet
 
-| Situation | Who we connect to | What is sent |
-|---|---|---|
-| Opening the app: refreshing the list of downloadable models | GitHub (`raw.githubusercontent.com`) | A normal web request (your IP address and app identifier "OnDevAI"); no personal data and no content |
-| You download a chat model, image model or voice | Hugging Face (`huggingface.co` and its content-delivery hosts), GitHub Releases (`github.com`, voices) | A normal web request (IP address, "OnDevAI" user-agent, and your Hugging Face token to huggingface.co **only if** you entered one) |
-| You paste your own model download link | The host you chose | A normal web request |
-| You download translation or language-ID packs | Google (ML Kit) | Handled by Google's ML Kit service; see §4 |
+<table>
+<thead><tr><th>Situation</th><th>Who we connect to</th><th>What is sent</th></tr></thead>
+<tbody>
+<tr><td>Opening the app: refreshing the list of downloadable models</td><td>GitHub (<code>raw.githubusercontent.com</code>)</td><td>A normal web request (your IP address and app identifier "OnDevAI"); no personal data and no content</td></tr>
+<tr><td>You download a chat model, image model or voice</td><td>Hugging Face (<code>huggingface.co</code> and its content-delivery hosts), GitHub Releases (<code>github.com</code>, voices)</td><td>A normal web request (IP address, "OnDevAI" user-agent, and your Hugging Face token to huggingface.co <strong>only if</strong> you entered one)</td></tr>
+<tr><td>You paste your own model download link</td><td>The host you chose</td><td>A normal web request</td></tr>
+<tr><td>You download translation or language-ID packs</td><td>Google (ML Kit)</td><td>Handled by Google's ML Kit service; see §4</td></tr>
+</tbody>
+</table>
 Those services receive your IP address and technical request data and handle it under their own privacy policies (Hugging Face, GitHub, Google). We do not control or receive it.
 
 ## 4. Third-party components
