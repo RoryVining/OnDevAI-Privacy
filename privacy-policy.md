@@ -5,10 +5,10 @@ permalink: /privacy-policy/
 
 # Privacy Policy — OnDevAI
 
-**Effective date:** [EFFECTIVE DATE — to be filled in by the developer]
+**Effective date:** 14 November 2026
 **App:** OnDevAI (Android package `com.ondevai.app`)
-**Developer / controller:** [DEVELOPER LEGAL NAME — to be filled in], [POSTAL ADDRESS — to be filled in], Australia
-**Contact:** [CONTACT EMAIL — to be filled in]
+**Developer / controller:** FastcommData Solutions, QLD, Australia
+**Contact:** romega_x@orica.com
 
 ## 1. Summary
 OnDevAI runs artificial-intelligence models **on your device**. We (the developer) do **not** operate a server for the app, do **not** require an account, and do **not** receive your documents, chats, prompts, photos, generated images, voice recordings or files. The app has no advertising and no analytics or crash-reporting SDK from us.
@@ -44,7 +44,7 @@ Those services receive your IP address and technical request data and handle it 
 We use no advertising, analytics or crash-reporting SDK.
 
 ## 5. Reporting offensive AI content
-The app lets you report an AI-generated answer or image as offensive. [DETAILS OF WHAT IS SENT, WHERE, AND FOR HOW LONG — to be filled in by the developer before release.] Reports are not linked to your identity because the app has no accounts.
+The app lets you report an AI-generated answer or image as offensive. When you tap Report, the app saves the report (the reason you pick, an optional note, the prompt, the generated output, the model name and the app version) **on your device only**. Nothing is sent to us or anyone else automatically. You can view, share or export the saved reports from Settings → Reported content; if you choose to share one, it goes to the app you pick in Android's share menu. If you want us to see a report, email it to romega_x@orica.com. Reports are not linked to your identity because the app has no accounts. Delete saved reports in the app at any time.
 
 ## 6. Permissions
 - **Camera** — to take a photo you attach to a chat or analyse; images stay on your device.
@@ -62,7 +62,7 @@ The app is not directed to children and is rated for adults. We do not knowingly
 Answers and images are produced by AI models and may be inaccurate, offensive or inappropriate. Models and checkpoints you download or import are third-party works under their own licences (including use restrictions for Stable Diffusion/SDXL models). You are responsible for how you use outputs.
 
 ## 9. Your rights and choices
-Because we hold no personal information about you, there is nothing for us to access, correct or delete on a server. You control your data on the device (see §2). To exercise rights under the Australian Privacy Act 1988 or other laws, or to ask a question, contact [CONTACT EMAIL — to be filled in]. You may complain to the Office of the Australian Information Commissioner (oaic.gov.au).
+Because we hold no personal information about you, there is nothing for us to access, correct or delete on a server. You control your data on the device (see §2). To exercise rights under the Australian Privacy Act 1988 or other laws, or to ask a question, contact romega_x@orica.com. You may complain to the Office of the Australian Information Commissioner (oaic.gov.au).
 
 ## 10. Security
 Network requests use HTTPS. Your Hugging Face token (if any) is encrypted with the Android Keystore. Downloaded model files are checked against SHA-256 hashes where the app provides one.
