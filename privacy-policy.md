@@ -19,7 +19,7 @@ The following stays in the app's private storage on your phone (it is not sent t
 - **Documents you import** (PDF, TXT, Markdown, HTML, DOCX, XLSX, PPTX, images), their text chunks, extracted figures, and a search index built on-device with an embedding model.
 - **Conversations** (your questions and the model's answers, with source references), your text-input history, and settings (theme, language, voice, alert preferences).
 - **Downloaded or imported AI models**, voices and language packs.
-- **Pictures you generate** or edit (stored in the app's gallery; if you tap Save, a copy is also written to your phone's Photos under *Pictures/RAGDev AI* (art) or *Pictures/RAGDev* (edited photos); if you tap Share, the file goes to the app you choose).
+- **Pictures you generate** or edit (stored in the app's gallery; if you tap Save, a copy is also written to your phone's Photos under *Pictures/OnDevAI* (art) or *Pictures/RAGDev* (edited photos); if you tap Share, the file goes to the app you choose).
 - **A Hugging Face access token, only if you choose to enter one** (to download gated models). It is encrypted with the Android Keystore and used only to authenticate to huggingface.co.
 You can delete conversations, documents/index, models, voices and gallery images inside the app, and everything is removed when you uninstall (except pictures you saved to Photos, which you can delete there). The app's data is not included in Android backups (the app turns Android Auto Backup off).
 
@@ -46,14 +46,35 @@ We use no advertising, analytics or crash-reporting SDK.
 ## 5. Reporting offensive AI content
 The app lets you report an AI-generated answer or image as offensive. When you tap Report, the app saves the report (the reason you pick, an optional note, the prompt, the generated output, the model name and the app version) **on your device only**. Nothing is sent to us or anyone else automatically. You can view, share or export the saved reports from Settings → Reported content; if you choose to share one, it goes to the app you pick in Android's share menu. If you want us to see a report, email it to romega_x@orica.com. Reports are not linked to your identity because the app has no accounts. Delete saved reports in the app at any time.
 
-## 6. Permissions
-- **Camera** — to take a photo you attach to a chat or analyse; images stay on your device.
-- **Microphone** — for voice input (see §4).
-- **Notifications** — download progress and an optional "response ready" alert.
-- **Vibrate** — optional haptic alert.
-- **Foreground services** — keep a download you started running, and keep an image model loaded while you use other apps.
-- **Internet** — §3.
-Files are opened only through Android's file picker; the app does not request broad storage access.
+## 6. App permissions and what they're for
+These are the permissions the app declares. The app does not ask for contacts, location, phone, SMS, calendar, or access to all your files or photos. Documents and images reach the app only through Android's file and photo pickers, which you control.
+
+**Permissions Android asks you about while you use the app (you can say no):**
+
+| Permission | What it allows | Where it is used | If you deny it |
+|---|---|---|---|
+| Camera | Taking a photo with the camera | When you tap the camera button to attach a photo to a chat, use live camera, or use the camera screen. Photos stay on your device (see §2). | You cannot take a photo; you can still choose an existing picture from your gallery. |
+| Microphone | Recording your voice while you speak | When you tap the microphone for voice input (see §4). Only while you are using it; the app does not store the recording. | Voice input does not work; typing still works. |
+| Notifications (Android 13 and newer) | Showing notifications | Download progress, and the optional "response ready" alert (Settings). Asked when you start a download or turn that alert on. | No notifications are shown; downloads and responses still work. |
+
+**Permissions that are granted automatically when you install (Android does not ask you):**
+
+| Permission | What it allows | Where it is used |
+|---|---|---|
+| Internet | Connecting to the internet | Downloading models, voices and language packs, and refreshing the list of downloadable models when you open the app (§3). If you are offline, those fail, but models and documents already on your device keep working. |
+| Network state | Checking whether you are connected | Used by the download and language-pack libraries to check for a connection before starting a download. |
+| Foreground service, and foreground service for data sync | Keeping a task running with a visible notification while you use other apps | Keeps a model, voice or language-pack download running when you leave the app. |
+| Wake lock | Keeping the phone awake briefly for background work | Used by Android's background-work library (WorkManager) while a download is running. |
+| Receive boot completed | Letting background work resume after the phone restarts | Used by the same background-work library for queued downloads. |
+| Vibrate | Vibrating the phone | Only if you turn on the optional "Vibrate" alert in Settings (off by default). |
+
+**Only on Android 9 and older:**
+
+| Permission | What it allows | Where it is used | If it is not granted |
+|---|---|---|---|
+| Write external storage | Saving files to shared storage | Saving a picture you choose to save into your Photos. It is declared for Android 9 and older only; newer Android versions do not need it. | Saving to Photos may not work on those versions; sharing still works. |
+
+You can review or change runtime permissions at any time in your phone's Settings → Apps → OnDevAI → Permissions.
 
 ## 7. Children
 The app is not directed to children and is rated for adults. We do not knowingly collect information from children, and because we do not collect personal information this applies to all users.
